@@ -9,7 +9,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 
-public class Animal extends Actor {
+public class Frog extends Actor {
 	Image imgW1;
 	Image imgA1;
 	Image imgS1;
@@ -33,7 +33,7 @@ public class Animal extends Actor {
 	double w = 800;
 	ArrayList<End> inter = new ArrayList<End>();
 	
-	public Animal(String imageLink) {
+	public Frog(String imageLink) {
 		
 		setImage(new Image(imageLink, imgSize, imgSize, true, true));
 		setX(300);
@@ -102,7 +102,8 @@ public class Animal extends Actor {
 	            }
 	        }
 			}
-		});	
+		});
+
 		setOnKeyReleased(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event) {
 				if (noMove) {}
@@ -211,7 +212,7 @@ public class Animal extends Actor {
 		if (getX()>600) {
 			move(-movement*2, 0);
 		}
-		if (getIntersectingObjects(Obstacle.class).size() >= 1) {
+		if (getIntersectingObjects(Vehicles.class).size() >= 1) {
 			carDeath = true;
 		}
 		if (getX() == 240 && getY() == 82) {

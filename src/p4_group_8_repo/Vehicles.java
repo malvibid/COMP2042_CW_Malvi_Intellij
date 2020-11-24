@@ -2,8 +2,8 @@ package p4_group_8_repo;
 
 import javafx.scene.image.Image;
 
-//Obstacle class controls the cars/Trucks.
-public class Obstacle extends Actor {
+//Vehicles class controls the cars/Trucks.
+public class Vehicles extends Actor {
 	private int speed;
 	@Override
 	public void act(long now) {
@@ -17,7 +17,7 @@ public class Obstacle extends Actor {
 			setX(600);
 	}
 	
-	public Obstacle(String imageLink, int xpos, int ypos, int s, int w, int h) {
+	public Vehicles(String imageLink, int xpos, int ypos, int s, int w, int h) {
 		setImage(new Image(imageLink, w,h, true, true));
 		setX(xpos);
 		setY(ypos);
