@@ -39,5 +39,6 @@ public class Turtle extends Actor{
 		setY(ypos);
 		speed = s;
 		setImage(turtle2);
+		setCache(true);
 	}
 }

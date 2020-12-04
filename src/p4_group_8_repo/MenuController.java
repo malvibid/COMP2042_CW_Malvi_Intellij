@@ -19,6 +19,7 @@ public class MenuController {
 
 
 
+    //When play button is clicked on in the main menu, then change scene to play game, in startPlay method in Main class.
     public void play(ActionEvent event){
         try {
             main.startPlay();

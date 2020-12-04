@@ -19,7 +19,7 @@ public class Log extends Actor {
 		setX(xpos);
 		setY(ypos);
 		speed = s;
-		
+		setCache(true);
 	}
 	public boolean getLeft() {
 		return speed < 0;

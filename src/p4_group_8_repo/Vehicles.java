@@ -22,6 +22,7 @@ public class Vehicles extends Actor {
 		setX(xpos);
 		setY(ypos);
 		speed = s;
+		setCache(true);
 	}
 
 }

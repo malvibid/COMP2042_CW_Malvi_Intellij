@@ -46,6 +46,7 @@ public class WetTurtle extends Actor{
 		setY(ypos);
 		speed = s;
 		setImage(turtle2);
+		setCache(true);
 	}
 	public boolean isSunk() {
 		return sunk;
