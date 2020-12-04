@@ -16,6 +16,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 
+//World class is responsible for making this game dynamic i.e., changing the game state overtime. It sets the environment for Frogger to run.
+//It implements the animation timer which is an infinite loop that updates the game objects and renders the scene to the screen, at a rate of approximately 60 times per second.
 public abstract class World extends Pane {
     private AnimationTimer timer;
     
@@ -24,6 +26,8 @@ public abstract class World extends Pane {
         //listens for changes in scene and updates the values according to new changes values.
     	sceneProperty().addListener(new ChangeListener<Scene>() {
 
+    	    //Changed method keeps a record of which keys are currently active. It does this by maintaining an array list of actor objects.
+            //When a key is initially pressed, a representation of the KeyEvent's KeyCode is added to the list, when the key is released we remove it from the list. This is controlled from the Frog class.
 			@Override
 			public void changed(ObservableValue<? extends Scene> observable, Scene oldValue, Scene newValue) {
 				if (newValue != null) {
